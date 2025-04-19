@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.env
+.env
+venv/
+ENV/
+env/
+*.sqlite3
+*.db
+
+# MacOS / Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs / temp files
+*.log
+*.tmp
+
+# VSCode
+.vscode/
+
+node_modules/
+
+# Selenium driver
+chromedriver.exe
+
+# Compiled HTML/JS
+/build/
+/dist/
