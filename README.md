@@ -57,3 +57,51 @@ The project will require the following software and services:
 - Integrate OpenAI’s API for an AI-powered Q&A interface based on current menus
 - Add a basic prompt input field to ask dining-related questions
 - Provide ability for user to manually refresh data
+
+## Requirements
+
+Make sure the following are installed:
+
+**System Requirements**
+
+- Python 3.8 or higher
+- Google Chrome browser
+- ChromeDriver (version matching your Chrome browser) - https://googlechromelabs.github.io/chrome-for-testing/#stable
+
+Note: You should add ChromeDriver to your system PATH, or specify its path in the script.
+
+**Python Dependencies**  
+Install all dependencies by running:  
+`pip install -r requirements.txt`
+
+This includes:
+
+- Flask
+- BeautifulSoup4
+- Selenium
+- APScheduler
+- openai
+- python-dotenv
+
+## How to Run
+
+1. Clone the repository and navigate into the project directory.
+
+2. If using the AI feature, create a `.env` file:  
+   `OPENAI_API_KEY=your_openai_key_here`
+
+3. Install all dependencies:  
+   `pip install -r requirements.txt`
+
+4. Download ChromeDriver:
+
+   - Match your local Chrome version
+   - Add it to your system PATH
+   - Or update line 13 of `scraper.py` to accordingly (`chrome_driver_path = "YOUR PATH HERE"`)
+
+5. Perform an initial run of the scraper:  
+   `python scraper.py`
+6. Then start the Flask server:  
+   `python app.py`
+
+7. Visit `http://localhost:5000` in your browser.
