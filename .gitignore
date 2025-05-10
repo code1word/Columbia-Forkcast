@@ -9,6 +9,9 @@ ENV/
 env/
 *.sqlite3
 *.db
+*.zip
+*.deb
+chromedriver.exe
 
 # MacOS / Windows system files
 .DS_Store

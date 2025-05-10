@@ -2,6 +2,7 @@ from flask import Flask, jsonify, render_template, request
 from database import init_db, connect_db, get_all_menu_data
 from scraper import scrape_website
 import json
+from openai import OpenAI
 import openai
 import os
 from dotenv import load_dotenv
@@ -79,7 +80,7 @@ def ask_ai():
     The current time is {datetime.now().strftime("%I:%M %p")}.
     """
     try:
-        client = openai.OpenAI()
+        client = OpenAI(api_key=openai.api_key)
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[

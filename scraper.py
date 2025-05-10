@@ -10,8 +10,13 @@ DB_FILE = "dining_halls.db"
 
 
 def scrape_website(website):
-  chrome_driver_path = "./chromedriver.exe"
+  chrome_driver_path = "/usr/bin/chromedriver"
   options = webdriver.ChromeOptions()
+  options.add_argument("--headless")
+  options.add_argument("--no-sandbox")
+  options.add_argument("--disable-dev-shm-usage")
+  options.add_argument("--disable-gpu")
+  options.add_argument("--window-size=1920x1080")
   driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
 
   try:
@@ -113,8 +118,13 @@ def store_dining_halls(dining_data):
 
 
 def scrape_menu_page(menu_url):
-  chrome_driver_path = "./chromedriver.exe"
+  chrome_driver_path = "/usr/bin/chromedriver"
   options = webdriver.ChromeOptions()
+  options.add_argument("--headless")
+  options.add_argument("--no-sandbox")
+  options.add_argument("--disable-dev-shm-usage")
+  options.add_argument("--disable-gpu")
+  options.add_argument("--window-size=1920x1080")
   driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
 
   try:
